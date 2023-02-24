@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
+    - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+        - run: npm ci
     - uses: jeanlescure/react-deploy-to-s3-action@main
       with:
         args: --acl public-read --follow-symlinks --delete
