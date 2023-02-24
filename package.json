@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "prod": "vite build",
+    "build": "yarn dev && vite build",
     "release": "standard-version",
     "test": "vitest",
     "coverage": "vitest run --coverage",
